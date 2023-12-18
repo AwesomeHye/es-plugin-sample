@@ -16,6 +16,7 @@ class TransportHelloWorldAction @Inject constructor( // @Inject: 구글 Guice �
     private val settings: Settings
 ) : TransportAction<HelloWorldRequest, HelloWorldResponse>(
     NAME, actionFilters, transportService.taskManager) {
+
     override fun doExecute(task: Task, request: HelloWorldRequest, listener: ActionListener<HelloWorldResponse>) {
         try {
             val greetings = settings.get("hello.greetings", "hello") // ES 에서 설정한 hello.greetings 값을 읽음

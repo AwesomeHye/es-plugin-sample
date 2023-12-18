@@ -26,7 +26,7 @@ class HelloWorldPlugin(private val settings: Settings) : Plugin(), ActionPlugin 
     }
 
     override fun getActions(): MutableList<ActionPlugin.ActionHandler<out ActionRequest, out ActionResponse>> {
-        return super.getActions()
+        return mutableListOf(ActionPlugin.ActionHandler(HelloWorldAction, TransportHelloWorldAction::class.java))
     }
 
     override fun getRestHandlers(
@@ -38,14 +38,6 @@ class HelloWorldPlugin(private val settings: Settings) : Plugin(), ActionPlugin 
         indexNameExpressionResolver: IndexNameExpressionResolver?,
         nodesInCluster: Supplier<DiscoveryNodes>?
     ): MutableList<RestHandler> {
-        return super.getRestHandlers(
-            settings,
-            restController,
-            clusterSettings,
-            indexScopedSettings,
-            settingsFilter,
-            indexNameExpressionResolver,
-            nodesInCluster
-        )
+        return mutableListOf(RestHelloWorldAction())
     }
 }
