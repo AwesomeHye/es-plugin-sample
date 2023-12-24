@@ -1,4 +1,4 @@
-package dev.hyein
+package dev.hyein.helloworldplugin
 
 import org.elasticsearch.common.Strings
 import org.elasticsearch.common.bytes.BytesArray

@@ -1,4 +1,4 @@
-package dev.hyein
+package dev.hyein.helloworldplugin
 
 import org.elasticsearch.action.ActionRequest
 import org.elasticsearch.action.ActionResponse
@@ -10,7 +10,6 @@ import org.elasticsearch.plugins.ActionPlugin
 import org.elasticsearch.plugins.Plugin
 import org.elasticsearch.rest.RestController
 import org.elasticsearch.rest.RestHandler
-import org.elasticsearch.rest.RestHeaderDefinition
 import java.util.function.Supplier
 
 class HelloWorldPlugin(private val settings: Settings) : Plugin(), ActionPlugin { // 인터페이스는 괄호 안붙이나봄

@@ -33,12 +33,15 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     compileOnly "org.elasticsearch:elasticsearch:${elasticVersion}"
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'org.elasticsearch.test:framework:${elasticVersion}'
 }
 
 
 
 test {
     useJUnitPlatform()
+
+    systemProperty("java.security.policy", "${projectDir}/src/test/resources/test-plugin-security.policy") // test 위한 policy 파일 경로 지정
 }
 
 esplugin {

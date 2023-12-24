@@ -1,4 +1,4 @@
-package dev.hyein
+package dev.hyein.helloworldplugin
 
 import org.elasticsearch.action.ActionRequest
 import org.elasticsearch.action.ActionRequestValidationException

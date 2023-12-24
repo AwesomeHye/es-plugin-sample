@@ -1,4 +1,4 @@
-package dev.hyein
+package dev.hyein.helloworldplugin
 
 import org.elasticsearch.action.ActionListener
 import org.elasticsearch.client.internal.node.NodeClient

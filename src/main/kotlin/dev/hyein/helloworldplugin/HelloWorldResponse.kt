@@ -1,4 +1,4 @@
-package dev.hyein
+package dev.hyein.helloworldplugin
 
 import org.elasticsearch.action.ActionResponse
 import org.elasticsearch.common.io.stream.StreamInput
